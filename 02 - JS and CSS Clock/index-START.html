@@ -18,7 +18,7 @@
 
   <style>
     html {
-      background: #018DED url(http://unsplash.it/1500/1000?image=842);
+      background: #018DED url(http://unsplash.it/1500/1000?image=677);
       background-size: cover;
       font-family: 'helvetica neue';
       text-align: center;
@@ -35,13 +35,14 @@
     }
 
     .clock {
-      width: 30rem;
-      height: 30rem;
-      border: 20px solid white;
-      border-radius: 50%;
-      margin: 50px auto;
-      position: relative;
-      padding: 2rem;
+    width: 30rem;
+    height: 30rem;
+    border: 20px solid #7d91af;
+    border-radius: 50%;
+    margin: 150px auto;
+    margin-right: 680px;
+    position: relative;
+    padding: 2rem;
       box-shadow:
         0 0 0 4px rgba(0,0,0,0.1),
         inset 0 0 0 3px #EFEFEF,
@@ -60,7 +61,6 @@
     .hand {
       width: 50%;
       height: 6px;
-      background: black;
       position: absolute;
       top: 50%;
       transform-origin: 100%;
@@ -72,12 +72,20 @@
 
     .hour-hand {
       height: 15px;
-      border-radius: 5px;
+      background: #4d5e7c;
 
     }
 
     .min-hand {
       height: 10px;
+      background: #4d5e7c8c;
+      border: 1px solid #4d5e7c8c;
+
+    }
+
+    .second-hand {
+      background: #4d5e7c1f;
+      border: 2px solid #4d5e7c1f;
     }
 
   </style>
@@ -97,7 +105,7 @@
 
       const secondsDegrees = ((seconds / 60) * 360) + 90;
       const minutesDegrees = ((minutes / 60) * 360) + 90;
-      const hourDegrees = ((hours / 60) * 360) + 90;
+      const hourDegrees = ((hours / 60) * 360) + 120;
 
       secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
       minuteHand.style.transform = `rotate(${minutesDegrees}deg)`;
