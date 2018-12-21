@@ -17,6 +17,12 @@
     <label for="opacity">Opacity:</label>
     <input id="opacity" type="range" name="opacity" min="10" max="100" value="10" data-sizing="%">
 
+    <label for="sepia">Sepia:</label>
+    <input id="sepia" type="range" name="sepia" min="10" max="100" value="10" data-sizing="%">
+
+    <label for="saturate">Saturate:</label>
+    <input id="saturate" type="range" name="saturate" min="10" max="100" value="10" data-sizing="%">
+
     <label for="base">Base Color</label>
     <input id="base" type="color" name="base" >
   </div>
@@ -39,14 +45,14 @@
       --spacing: 20px;
       --background: #FB3640;
       --blur: 2px;
-      --opacity: 15%;
+      --opacity: 100%;
+      --sepia: 15%;
+      --saturate: 15%;
     }
 
     img {
       background: var(--background);
-      filter: blur(var(--blur)) opacity(var(--opacity));
-      padding: var(--spacing);
-
+      filter: blur(var(--blur)) opacity(var(--opacity)) sepia(var(--sepia)) saturate(var(--saturate));
     }
 
     body {
